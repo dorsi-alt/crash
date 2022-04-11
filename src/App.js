@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+
+import DesktopView from "./Viewports/desktop";
+import { useMediaQuery } from "react-responsive";
 
 function App() {
+
+  const isDesktop = useMediaQuery({
+    query: "(min-width: 1224px)"
+  });
+  const isTablet = useMediaQuery({
+    query: "(max-width: 1224px)"
+  });
+  const isMobile = useMediaQuery({
+    query: "(max-width: 786px)"
+  });
+  const isPortrait = useMediaQuery({
+    query: "(orientation: portrait)"
+  });
+  const isRetina = useMediaQuery({
+    query: "(max-resolution: 300dpi)"
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {isDesktop  && <DesktopView/>}
+    </>
   );
 }
 
