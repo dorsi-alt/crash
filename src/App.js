@@ -1,5 +1,5 @@
 
-import DesktopView from "./Viewports/desktop";
+import DesktopView from "./Components/Viewports/desktop";
 import { useMediaQuery } from "react-responsive";
 
 function App() {
@@ -22,7 +22,9 @@ function App() {
 
   return (
     <>
-    {isDesktop  && <DesktopView/>}
+    {/* {isDesktop  && <DesktopView/>}
+     */}
+     <DesktopView/>
     </>
   );
 }

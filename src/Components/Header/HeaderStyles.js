@@ -12,7 +12,7 @@ export const Header = styled.header`
     display: flex;
     position: fixed;
     width: 100%;
-    height: 7.5%;
+    height: 55px;
 `;
 
 export const CasinoLogoDiv = styled.div`
